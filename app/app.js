@@ -2,7 +2,7 @@ var vue = new Vue({
 	el: '#gamestate',
 	
 	data: {
-		gamestate: ""
+		gamestates: ""
 	},
 
 	ready: function() {
@@ -10,6 +10,6 @@ var vue = new Vue({
 });
 
 var socket = io();
-socket.on('gamestate', function(gamestate) {
-	vue.$set('gamestate', gamestate);
+socket.on('gamestates', function(gamestates) {
+	vue.$set('gamestates', gamestates);
 });

@@ -11,7 +11,21 @@
 	<body>
 	  <!-- main body of our application -->
 	  <div class="container" id="gamestate">
-		{{ gamestate }}
+		<table v-if="gamestates">
+			<tr v-for="gamestate in gamestates">
+				<td>
+					<span>{{ gamestate.player.name }}</span>
+				</td>
+				<td>
+					<img src="https://yasp.co/apps/dota2/images/heroes/{{ gamestate.hero.name }}_full.png" style="height: 24px" />
+				</td>
+				<td>
+					<span>{{ gamestate.player.last_hits }}</span>
+				</td>
+				<td>
+					<span>{{ gamestate.player.denies }}</span>
+				</td>
+			</tr>
 	  </div>
 
 	  <!-- JS -->

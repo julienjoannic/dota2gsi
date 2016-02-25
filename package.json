@@ -4,6 +4,9 @@
   "description": "Dota 2 Game State Integration server",
   "dependencies": {
 	"express": "latest",
-	"socket.io": "latest"
+	"socket.io": "latest",
+	"vue": "latest",
+	"vue-resource": "latest",
+	"bootstrap": "latest"
   }
 }

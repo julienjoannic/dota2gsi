@@ -1,0 +1,66 @@
+{
+	"auth": {
+		"token": "miaou"
+	},
+	"provider": {
+		"name": "provider_name",
+		"appid": "570",
+		"version": "1.0",
+		"timestamp": "20160225134500"
+	},
+	"map": {
+		"name": "theMap",
+		"matchid": "21654649",
+		"game_time": 150,
+		"clock_time": 3000,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_DISCONNECT",
+		"win_team": "",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": 92711186,
+		"name": "FireBeurk",
+		"activity": "playing",
+		"kills": 20,
+		"deaths": 1,
+		"assists": 13,
+		"last_hits": 143,
+		"denies": 31,
+		"kill_streak": 3,
+		"team_name": "Petoles",
+		"gold": 2103,
+		"gold_reliable": 1500,
+		"gold_unreliable": 603,
+		"gpm": 700,
+		"xpm": 571
+	},
+	"hero": {
+		"id": 1,
+		"name": "lion",
+		"level": 21,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 1300,
+		"buyback_cooldown": 14,
+		"health": 2500,
+		"max_health": 2750,
+		"health_percent": 0.87,
+		"mana": 250,
+		"max_mana": 300,
+		"mana_percent": 0.9,
+		"silenced": true,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": true
+	},
+	"abilities": [
+		
+	]
+}
