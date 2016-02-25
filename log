@@ -1,0 +1,1134 @@
+Listening on port 9000 for Game State Integration
+Listening on port 8080 for HTTP server
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406993
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 228,
+		"clock_time": 91,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 418,
+		"gold_reliable": 0,
+		"gold_unreliable": 418,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 123,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406994
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 229,
+		"clock_time": 92,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 419,
+		"gold_reliable": 0,
+		"gold_unreliable": 419,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"map": {
+			"game_time": 228,
+			"clock_time": 91
+		},
+		"player": {
+			"gold": 418,
+			"gold_unreliable": 418
+		},
+		"hero": {
+			"buyback_cost": 123
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406994
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 229,
+		"clock_time": 92,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 420,
+		"gold_reliable": 0,
+		"gold_unreliable": 420,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"player": {
+			"gold": 419,
+			"gold_unreliable": 419
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406995
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 230,
+		"clock_time": 93,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 421,
+		"gold_reliable": 0,
+		"gold_unreliable": 421,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"map": {
+			"game_time": 229,
+			"clock_time": 92
+		},
+		"player": {
+			"gold": 420,
+			"gold_unreliable": 420
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406995
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 230,
+		"clock_time": 93,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 422,
+		"gold_reliable": 0,
+		"gold_unreliable": 422,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"player": {
+			"gold": 421,
+			"gold_unreliable": 421
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406996
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 231,
+		"clock_time": 94,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 422,
+		"gold_reliable": 0,
+		"gold_unreliable": 422,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"map": {
+			"game_time": 230,
+			"clock_time": 93
+		}
+	}
+}
+Request received
+Received {
+	"provider": {
+		"name": "Dota 2",
+		"appid": 570,
+		"version": 43,
+		"timestamp": 1456406996
+	},
+	"map": {
+		"name": "dota",
+		"matchid": 0,
+		"game_time": 231,
+		"clock_time": 94,
+		"daytime": true,
+		"nightstalker_night": false,
+		"game_state": "DOTA_GAMERULES_STATE_GAME_IN_PROGRESS",
+		"win_team": "none",
+		"customgamename": "",
+		"ward_purchase_cooldown": 0
+	},
+	"player": {
+		"steamid": "76561198135003481",
+		"name": "imaginate",
+		"activity": "playing",
+		"kills": 0,
+		"deaths": 0,
+		"assists": 0,
+		"last_hits": 0,
+		"denies": 0,
+		"kill_streak": 0,
+		"team_name": "radiant",
+		"gold": 423,
+		"gold_reliable": 0,
+		"gold_unreliable": 423,
+		"gpm": 100,
+		"xpm": 0
+	},
+	"hero": {
+		"id": 73,
+		"name": "npc_dota_hero_alchemist",
+		"level": 1,
+		"alive": true,
+		"respawn_seconds": 0,
+		"buyback_cost": 124,
+		"buyback_cooldown": 0,
+		"health": 655,
+		"max_health": 655,
+		"health_percent": 100,
+		"mana": 325,
+		"max_mana": 325,
+		"mana_percent": 100,
+		"silenced": false,
+		"stunned": false,
+		"disarmed": false,
+		"magicimmune": false,
+		"hexed": false,
+		"muted": false,
+		"break": false,
+		"has_debuff": false
+	},
+	"abilities": {
+		"ability0": {
+			"name": "alchemist_acid_spray",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability1": {
+			"name": "alchemist_unstable_concoction",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability2": {
+			"name": "alchemist_goblins_greed",
+			"level": 1,
+			"can_cast": false,
+			"passive": true,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": false
+		},
+		"ability3": {
+			"name": "alchemist_chemical_rage",
+			"level": 0,
+			"can_cast": false,
+			"passive": false,
+			"ability_active": true,
+			"cooldown": 0,
+			"ultimate": true
+		},
+		"attributes": {
+			"level": 0
+		}
+	},
+	"items": {
+		"slot0": {
+			"name": "item_clarity",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot1": {
+			"name": "item_faerie_fire",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false
+		},
+		"slot2": {
+			"name": "item_tango",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 4
+		},
+		"slot3": {
+			"name": "item_flask",
+			"can_cast": true,
+			"cooldown": 0,
+			"passive": false,
+			"charges": 1
+		},
+		"slot4": {
+			"name": "empty"
+		},
+		"slot5": {
+			"name": "empty"
+		},
+		"stash0": {
+			"name": "empty"
+		},
+		"stash1": {
+			"name": "empty"
+		},
+		"stash2": {
+			"name": "empty"
+		},
+		"stash3": {
+			"name": "empty"
+		},
+		"stash4": {
+			"name": "empty"
+		},
+		"stash5": {
+			"name": "empty"
+		}
+	},
+	"previously": {
+		"player": {
+			"gold": 422,
+			"gold_unreliable": 422
+		}
+	}
+}
