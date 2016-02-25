@@ -1,0 +1,9 @@
+{
+  "name": "dota2-gsi",
+  "version": "0.0.1",
+  "description": "Dota 2 Game State Integration server",
+  "dependencies": {
+	"express": "latest",
+	"socket.io": "latest"
+  }
+}
