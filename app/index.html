@@ -9,145 +9,154 @@
 	  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	</head>
 	<body>
-	  <div class="container-fluid" id="vue">
-		<div class="dropdown">
-			<ul class="nav nav-pills">
-				<li v-for="game in games" role="presentation" v-on:click="onGameIdSelected($event)" v-bind:class="{ active: game.state.map.matchid == selectedgameid }"><a href="#">Match {{ game.state.map.matchid }}</a></li>
-			</ul>
-		</div>
-	  <!-- main body of our application -->
-		<div v-if="selectedgame" id="gameinfo">
-			<h1 class="text-center"> {{ getTime(selectedgame.state.map.clock_time) }}</h1>
-			<div class="row">
-				<div class="col-md-8">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Joueur</th>
-								<th>Héros</th>
-								<th>Lvl</th>
-								<th>Vie</th>
-								<th>Mana</th>
-								<th>Or</th>
-								<th>K</th>
-								<th>D</th>
-								<th>A</th>
-								<th>KDA</th>
-								<th>Last hits</th>
-								<th>Denies</th>
-								<th>Items</th>
-								<th>Skills</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr v-for="gamestate in selectedgame.states">
-								<td>
-									<span>{{ gamestate.player.name }}</span>
-								</td>
-								<td>
-									<img v-if="gamestate.hero.name" v-bind:src="getHeroImageSrc(gamestate.hero.name)" style="height: 32px" />
-								</td>
-								<td class="text-center">
-									{{ gamestate.hero.level }}
-								</td>
-								<td>
-									<div class="progress" style="width: 100px">
-										<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ gamestate.hero.health }}" aria-valuemin="0" aria-valuemax="{{ gamestate.hero.max_health }}" style="width: {{ gamestate.hero.health_percent }}%;">
-											{{ gamestate.hero.health }} / {{ gamestate.hero.max_health }}
-										</div>
-									</div>
-								</td>
-								<td>
-									<div class="progress" style="width: 100px">
-										<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ gamestate.hero.mana }}" aria-valuemin="0" aria-valuemax="{{ gamestate.hero.max_mana }}" style="width: {{ gamestate.hero.mana_percent }}%;">
-											{{ gamestate.hero.mana }} / {{ gamestate.hero.max_mana }}
-										</div>
-									</div>
-								</td>
-								<td>
-									<span>{{ gamestate.player.gold }}</span>
-									<img src="http://hydra-media.cursecdn.com/dota2.gamepedia.com/2/2b/Gold_icon.png?version=bd17a2a20bdc59998085f6c7e2a87e60" />
-								</td>
-								<td>
-									<span>{{ gamestate.player.kills }}</span>
-								</td>
-								<td>
-									<span>{{ gamestate.player.deaths }}</span>
-								</td>
-								<td>
-									<span>{{ gamestate.player.assists }}</span>
-								</td>
-								<td>
-									<span>{{ ((gamestate.player.kills + gamestate.player.assists) / gamestate.player.deaths).toFixed(2) }}</span>
-								</td>
-								<td>
-									<span>{{ gamestate.player.last_hits }}</span>
-								</td>
-								<td>
-									<span>{{ gamestate.player.denies }}</span>
-								</td>
-								<td>
-									<table>
-										<tr>
-											<td v-for="item in gamestate.items">
-												<img v-show="item.name != 'empty'" v-bind:src="getItemImageSrc(item.name)" style="height: 32px" />
-											</td>
-										</tr>
-										<tr>
-											<td v-for="item in gamestate.items" style="text-align: center">
-												<span v-if="item.charges">{{ item.charges }}</span>
-											</td>
-										</tr>
-									</table>
-								</td>
-								<td>
-									<table>
-										<tr>
-											<td v-for="ability in gamestate.abilities">
-												<div class="text-center vertical-center" v-if="ability.name" style="height: 32px; width: 32px; background-image: url(https://yasp.co/apps/dota2/images/abilities/{{ ability.name }}_md.png); background-size: contain; {{ (ability.level == 0 || ability.cooldown > 0) ? '-webkit-filter: grayscale(100%);' : '' }}">
-													<span v-if="ability.cooldown > 0" style="font-weight: bold; color: white; font-size: 1.2em">{{ ability.cooldown }}</span>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td v-for="ability in gamestate.abilities" style="text-align: center">
-												<span v-if="ability.name">{{ ability.level }}</span>
-											</td>
-										</tr>
-									</table>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-				<div class="col-md-3">
-					<table class="table">
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>A acheter par</th>
-								<th>Timing attendu</th>
-								<th>Timing réel</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr v-for="item in getKeyItems(selectedgame)">
-								<td><img v-bind:src="getItemImageSrc(item.name)" style="height: 32px" /></td>
-								<td><img v-if="item.hero" v-bind:src="getHeroImageSrc(item.hero)" style="height: 32px;" /></td>
-								<td><span>{{ getTime(item.timing) }}</span></td>
-								<td class="{{ getItemPurchaseTimingClass(selectedgame, item.name, item.hero, item.timing) }}"><span>{{ getItemPurchaseTiming(selectedgame, item.name, item.hero) }}</span></td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
+		<div class="container-fluid" id="vue">
+			<div class="dropdown">
+				<ul class="nav nav-pills">
+					<li v-for="game in games" role="presentation" v-on:click="onGameIdSelected($event)" v-bind:class="{ active: game.state.map.matchid == selectedgameid }"><a href="#">Match {{ game.state.map.matchid }}</a></li>
+				</ul>
 			</div>
-		  </div>
-	  </div>
+	  <!-- main body of our application -->
+			<div v-if="selectedgame" id="gameinfo">
+				<h1 class="text-center"> {{ getTime(selectedgame.state.map.clock_time) }}</h1>
+				
+				<ul v-if="selectedgame" id="panels" class="list-unstyled"> 
+					<li class="panel panel-info" style="float: left; margin: 10px">
+						<div class="panel-heading">Héros</div>
+						<div class="panel-body">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Joueur</th>
+										<th>Héros</th>
+										<th>Lvl</th>
+										<th>Vie</th>
+										<th>Mana</th>
+										<th>Or</th>
+										<th>K</th>
+										<th>D</th>
+										<th>A</th>
+										<th>KDA</th>
+										<th>Last hits</th>
+										<th>Denies</th>
+										<th>Items</th>
+										<th>Skills</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="gamestate in selectedgame.states">
+										<td>
+											<span>{{ gamestate.player.name }}</span>
+										</td>
+										<td>
+											<img v-if="gamestate.hero.name" v-bind:src="getHeroImageSrc(gamestate.hero.name)" style="height: 32px" />
+										</td>
+										<td class="text-center">
+											{{ gamestate.hero.level }}
+										</td>
+										<td>
+											<div class="progress" style="width: 100px">
+												<div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="{{ gamestate.hero.health }}" aria-valuemin="0" aria-valuemax="{{ gamestate.hero.max_health }}" style="width: {{ gamestate.hero.health_percent }}%;">
+													{{ gamestate.hero.health }} / {{ gamestate.hero.max_health }}
+												</div>
+											</div>
+										</td>
+										<td>
+											<div class="progress" style="width: 100px">
+												<div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{ gamestate.hero.mana }}" aria-valuemin="0" aria-valuemax="{{ gamestate.hero.max_mana }}" style="width: {{ gamestate.hero.mana_percent }}%;">
+													{{ gamestate.hero.mana }} / {{ gamestate.hero.max_mana }}
+												</div>
+											</div>
+										</td>
+										<td>
+											<span>{{ gamestate.player.gold }}</span>
+											<img src="http://hydra-media.cursecdn.com/dota2.gamepedia.com/2/2b/Gold_icon.png?version=bd17a2a20bdc59998085f6c7e2a87e60" />
+										</td>
+										<td>
+											<span>{{ gamestate.player.kills }}</span>
+										</td>
+										<td>
+											<span>{{ gamestate.player.deaths }}</span>
+										</td>
+										<td>
+											<span>{{ gamestate.player.assists }}</span>
+										</td>
+										<td>
+											<span>{{ ((gamestate.player.kills + gamestate.player.assists) / gamestate.player.deaths).toFixed(2) }}</span>
+										</td>
+										<td>
+											<span>{{ gamestate.player.last_hits }}</span>
+										</td>
+										<td>
+											<span>{{ gamestate.player.denies }}</span>
+										</td>
+										<td>
+											<table>
+												<tr>
+													<td v-for="item in gamestate.items">
+														<img v-show="item.name != 'empty'" v-bind:src="getItemImageSrc(item.name)" style="height: 32px" />
+													</td>
+												</tr>
+												<tr>
+													<td v-for="item in gamestate.items" style="text-align: center">
+														<span v-if="item.charges">{{ item.charges }}</span>
+													</td>
+												</tr>
+											</table>
+										</td>
+										<td>
+											<table>
+												<tr>
+													<td v-for="ability in gamestate.abilities">
+														<div class="text-center vertical-center" v-if="ability.name" style="height: 32px; width: 32px; background-image: url(https://yasp.co/apps/dota2/images/abilities/{{ ability.name }}_md.png); background-size: contain; {{ (ability.level == 0 || ability.cooldown > 0) ? '-webkit-filter: grayscale(100%);' : '' }}">
+															<span v-if="ability.cooldown > 0" style="font-weight: bold; color: white; font-size: 1.2em">{{ ability.cooldown }}</span>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td v-for="ability in gamestate.abilities" style="text-align: center">
+														<span v-if="ability.name">{{ ability.level }}</span>
+													</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li class="panel panel-info" style="float: left; margin: 10px">
+						<div class="panel-heading">Items clés</div>
+						<div class="panel-body">
+							<table class="table">
+								<thead>
+									<tr>
+										<th>Item</th>
+										<th>A acheter par</th>
+										<th>Timing attendu</th>
+										<th>Timing réel</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr v-for="item in getKeyItems(selectedgame)">
+										<td><img v-bind:src="getItemImageSrc(item.name)" style="height: 32px" /></td>
+										<td><img v-if="item.hero" v-bind:src="getHeroImageSrc(item.hero)" style="height: 32px;" /></td>
+										<td><span>{{ getTime(item.timing) }}</span></td>
+										<td class="{{ getItemPurchaseTimingClass(selectedgame, item.name, item.hero, item.timing) }}"><span>{{ getItemPurchaseTiming(selectedgame, item.name, item.hero) }}</span></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
 
-	  <!-- JS -->
-	  <script src="node_modules/vue/dist/vue.js"></script>
-	  <script src="node_modules/vue-resource/dist/vue-resource.js"></script>
-	  <script src="/socket.io/socket.io.js"></script>
-	  <script src="app.js"></script>
+		<!-- JS -->
+		<script src="node_modules/vue/dist/vue.js"></script>
+		<script src="node_modules/vue-resource/dist/vue-resource.js"></script>
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<script src="app.js"></script>
 	</body>
 </html>

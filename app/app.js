@@ -826,3 +826,21 @@ var socket = io();
 socket.on('games', function(games) {
 	vue.setGames(games);
 });
+
+jQuery(function($) {
+	var panels = $('#panels');
+
+	panels.sortable({
+		// Only make the .panel-heading child elements support dragging.
+		// Omit this to make then entire <li>...</li> draggable.
+		handle: '.panel-heading', 
+		update: function() {
+			$('.panel', panels).each(function(index, elem) {
+				 var $listItem = $(elem),
+					 newIndex = $listItem.index();
+
+				 // Persist the new indices.
+			});
+		}
+	});
+});
