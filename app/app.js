@@ -1,15 +1,37 @@
 var vue = new Vue({
-	el: '#gamestate',
+	el: '#vue',
 	
 	data: {
-		gamestates: ""
+		games: {},
+		selectedgame: {},
+		selectedgameid: ''
 	},
 
 	ready: function() {
+	},
+	
+	methods: {
+		onGameIdSelected: function(e) {
+			console.log('Game #' + e.target.text + ' as been selected');
+			this.setSelectedGameId(e.target.text.replace('Match ', ''));
+		},
+		
+		setSelectedGameId: function(gameid) {
+			this.$set('selectedgameid', gameid);
+			this.$set('selectedgame', this.games[gameid])
+		},
+		
+		setGames: function(games) {
+			
+			this.$set('games', games);
+			if (this.selectedgameid == '' && games) {
+				this.setSelectedGameId(Object.keys(games)[0]);
+			}
+		}
 	}
 });
 
 var socket = io();
-socket.on('gamestates', function(gamestates) {
-	vue.$set('gamestates', gamestates);
+socket.on('games', function(games) {
+	vue.setGames(games);
 });
