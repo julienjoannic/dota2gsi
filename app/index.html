@@ -16,8 +16,8 @@
 			</ul>
 		</div>
 	  <!-- main body of our application -->
-		<div id="gameinfo">
-			<h1> {{ Math.floor(selectedgame.state.map.clock_time / 60) }}:{{ Math.abs(selectedgame.state.map.clock_time % 60) }}</h1>
+		<div v-if="selectedgame != ''" id="gameinfo">
+			<h1 class="text-center"> {{ getTime(selectedgame.state.map.clock_time) }}</h1>
 			<table class="table">
 				<thead>
 					<tr>

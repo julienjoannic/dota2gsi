@@ -27,6 +27,15 @@ var vue = new Vue({
 			if (this.selectedgameid == '' && games) {
 				this.setSelectedGameId(Object.keys(games)[0]);
 			}
+			else if (this.selectedgameid != '') {
+				this.$set('selectedgame', games[this.selectedgameid]);
+			}
+		},
+		
+		getTime: function(clockTime) {
+			var minutes = Math.floor(clockTime / 60);
+			var seconds = Math.abs(clockTime) % 60;
+			return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
 		}
 	}
 });
