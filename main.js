@@ -53,8 +53,8 @@ function updateItemTimings(gamestate) {
 		var item = gamestate.items[slot];
 		if (item.name == 'empty') continue;
 		
-		if (game.itemTimings.filter(function(itm) { return itm.name == item.name; } ).length == 0) {
-			console.log('Item ' + item.name + ' first purchased at ' + gamestate.map.clock_time + 's');
+		if (game.itemTimings.filter(function(itm) { return itm.name == item.name && item.purchased_by_hero == gamestate.hero.name; } ).length == 0) {
+			console.log('Item ' + item.name + ' first purchased by ' + gamestate.hero.name + ' at ' + gamestate.map.clock_time + 's');
 			game.itemTimings.push( { name: item.name, purchased_at: gamestate.map.clock_time, purchased_by: gamestate.player.name, purchased_by_hero: gamestate.hero.name });
 		}
 	}

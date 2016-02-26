@@ -16,7 +16,7 @@
 			</ul>
 		</div>
 	  <!-- main body of our application -->
-		<div v-if="selectedgame != ''" id="gameinfo">
+		<div v-if="selectedgame" id="gameinfo">
 			<h1 class="text-center"> {{ getTime(selectedgame.state.map.clock_time) }}</h1>
 			<div class="row">
 				<div class="col-md-8">
@@ -45,7 +45,7 @@
 									<span>{{ gamestate.player.name }}</span>
 								</td>
 								<td>
-									<img v-if="gamestate.hero.name" src="{{ getHeroImageSrc(gamestate.hero.name) }}" style="height: 32px" />
+									<img v-if="gamestate.hero.name" v-bind:src="getHeroImageSrc(gamestate.hero.name)" style="height: 32px" />
 								</td>
 								<td class="text-center">
 									{{ gamestate.hero.level }}
@@ -90,7 +90,7 @@
 									<table>
 										<tr>
 											<td v-for="item in gamestate.items">
-												<img v-show="item.name != 'empty'" src="{{ getItemImageSrc(item.name) }}" style="height: 32px" />
+												<img v-show="item.name != 'empty'" v-bind:src="getItemImageSrc(item.name)" style="height: 32px" />
 											</td>
 										</tr>
 										<tr>
@@ -120,20 +120,22 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="col-md-2">
+				<div class="col-md-3">
 					<table class="table">
 						<thead>
 							<tr>
 								<th>Item</th>
-								<th>Timing</th>
-								<th>Acheté par</th>
+								<th>A acheter par</th>
+								<th>Timing attendu</th>
+								<th>Timing réel</th>
 							</tr>
 						</thead>
 						<tbody>
-							<tr v-for="item in selectedgame.itemTimings">
-								<td><img src="{{ getItemImageSrc(item.name) }}" style="height: 32px" /></td>
-								<td><span>{{ getTime(item.purchased_at) }}</span></td>
-								<td><img src="{{ getHeroImageSrc(item.purchased_by_hero) }}" style="height: 32px; margin-right: 10px" /><span>{{ item.purchased_by }}</span></td>
+							<tr v-for="item in getKeyItems(selectedgame)">
+								<td><img v-bind:src="getItemImageSrc(item.name)" style="height: 32px" /></td>
+								<td><img v-if="item.hero" v-bind:src="getHeroImageSrc(item.hero)" style="height: 32px;" /></td>
+								<td><span>{{ getTime(item.timing) }}</span></td>
+								<td class="{{ getItemPurchaseTimingClass(selectedgame, item.name, item.hero, item.timing) }}"><span>{{ getItemPurchaseTiming(selectedgame, item.name, item.hero) }}</span></td>
 							</tr>
 						</tbody>
 					</table>
