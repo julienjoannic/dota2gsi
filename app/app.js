@@ -36,6 +36,14 @@ var vue = new Vue({
 			var minutes = Math.floor(clockTime / 60);
 			var seconds = Math.abs(clockTime) % 60;
 			return minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
+		},
+		
+		getItemImageSrc: function(itemName) {
+			return 'https://yasp.co/apps/dota2/images/items/' + itemName.replace('item_', '') + '_lg.png';
+		},
+		
+		getHeroImageSrc: function(heroName) {
+			return 'https://yasp.co/apps/dota2/images/heroes/' + heroName.replace('npc_dota_hero_', '') + '_full.png';
 		}
 	}
 });
