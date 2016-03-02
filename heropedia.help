@@ -1,0 +1,8 @@
+Pour récupérer les infos sur les items, en vue par exemple d'un joli hover avec les caractéristiques :
+https://www.dota2.com/jsfeed/heropediadata?feeds=itemdata&v=33146396nxQnPXs4ubS&l=french
+
+... ça marhe aussi avec les héros :
+https://www.dota2.com/jsfeed/heropediadata?feeds=herodata&v=33146396nxQnPXs4ubS&l=french
+
+... et avec les compétences :
+https://www.dota2.com/jsfeed/heropediadata?feeds=abilitydata&v=33146396nxQnPXs4ubS&l=french
